@@ -1,0 +1,29 @@
+{
+  "name": "web-flashcards-challenge",
+  "version": "1.0.0",
+  "description": "Мы собираемся создать веб-приложение для флэш-карт. Наше приложение предоставит пользователям возможность использования флэш-карты. \r Пользователь выберет колоду и сыграет партию с флэш-картами.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KirillPanov163/flachcards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KirillPanov163/flachcards/issues"
+  },
+  "homepage": "https://github.com/KirillPanov163/flachcards#readme",
+  "devDependencies": {
+    "@elbrus/eslint-config": "^1.1.0",
+    "@elbrus/eslint-plugin": "^1.0.1",
+    "@eslint/js": "^9.28.0",
+    "@eslint/json": "^0.12.0",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0"
+  }
+}
