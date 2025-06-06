@@ -130,6 +130,20 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        deckId: 4,
+        question: "Что пугает студентов 1-ой фазы?",
+        answer: "Чекпоинты чекпоинт",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 4,
+        question: "Что пугает студентов уже 3-ой фазы?",
+        answer: "Ничего",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
 
 
     ]);
