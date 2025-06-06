@@ -9,6 +9,7 @@ import DecksPage from "./pages/DecksPage";
 import CardsPage from "./pages/CardsPage";
 import SessionPage from "./pages/SessionPage";
 import NotFound from "./pages/NotFound";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <Routes>
         {/* 🔓 Страница регистрации — вне Layout */}
         <Route path='/register' element={<RegisterPage />} />
+
+        {/* 🔓 Страница для входа — вне Layout */}
+        <Route path='/login' element={<LoginPage />} />
 
         <Route path='/' element={<Layout />}>
           {/* Страница стартовая  */}
