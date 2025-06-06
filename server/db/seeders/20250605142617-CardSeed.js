@@ -133,7 +133,7 @@ module.exports = {
       {
         deckId: 4,
         question: "Что пугает студентов 1-ой фазы?",
-        answer: "Чекпоинты чекпоинт",
+        answer: "Чекпоинты чекпоинт чек поинты чек поинт",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
