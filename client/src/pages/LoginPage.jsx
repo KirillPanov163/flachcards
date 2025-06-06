@@ -33,7 +33,7 @@ export default function LoginPage() {
           Вход в аккаунт
         </h1>
 
-        <form onSubmit={handleSubmit} className='space-y-4'>
+        <form onSubmit={handleSubmit} className='space-y-4' autoComplete="on">
           <input
             className='w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400'
             type='email'
@@ -41,6 +41,8 @@ export default function LoginPage() {
             value={form.email}
             onChange={e => setForm({ ...form, email: e.target.value })}
             required
+            name="email"
+            autoComplete="email"
           />
           <input
             className='w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400'
@@ -49,6 +51,8 @@ export default function LoginPage() {
             value={form.passwordHash}
             onChange={e => setForm({ ...form, passwordHash: e.target.value })}
             required
+            name="password"
+            autoComplete="password"
           />
           <button
             type='submit'
@@ -64,6 +68,7 @@ export default function LoginPage() {
               hover:bg-blue-700 
               hover:shadow-m
               active:scale-95
+              cursor-pointer
             '
           >
             Войти
@@ -91,6 +96,7 @@ export default function LoginPage() {
             active:scale-95
             transition-all 
             duration-300
+            cursor-pointer
           '
         >
           Зарегистрироваться

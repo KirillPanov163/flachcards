@@ -85,7 +85,7 @@ function CardsPage() {
         className='
         max-w-md 
         w-full 
-        min-h-[300px] 
+        h-[380px] 
         bg-white 
         rounded-xl 
         p-6 

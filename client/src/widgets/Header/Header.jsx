@@ -30,7 +30,7 @@ export default function Header() {
 
     {/* Навигация */}
     <div className="flex-1 flex justify-center">
-      <nav className="flex items-center space-x-8 text-xl">
+      <nav className="flex items-center space-x-8 text-xl font-bold">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -67,9 +67,12 @@ export default function Header() {
     {/* Пользователь и выход */}
     <div className="flex items-center gap-4">
       {user && (
-        <span className="mr-1 text-lg sm:text-xl text-gray-300 flex items-center gap-2">
-          👤 {user.name}
-        </span>
+
+<div className="flex items-center gap-2 text-gray-300 text-lg sm:text-xl">
+<span className="material-symbols-outlined text-2xl">person</span>
+<span className="text-2xl">{user.name}</span>
+</div>
+
       )}
 
       <button
@@ -88,7 +91,10 @@ export default function Header() {
           duration-300 
           hover:bg-red-700 
           hover:shadow-xl 
+          hover:scale-102
           active:scale-95
+          cursor-pointer
+          font-bold
         "
       >
         Выйти

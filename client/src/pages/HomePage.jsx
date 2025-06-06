@@ -40,8 +40,9 @@ function HomePage() {
             ease-in-out
             hover:bg-blue-700
             hover:shadow-xl
-            hover:scale-105
+            hover:scale-102
             active:scale-95
+            font-bold
           '
         >
           Начать игру
