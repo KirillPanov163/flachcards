@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import CardApi from "../entities/cards/CardApi";
 import { useNavigate, useParams } from "react-router-dom";
 import { saveSession } from "../entities/sessions/saveSession";
-import UserApi from "../entities/users/UserApi";
 
 function CardsPage() {
   const [cards, setCards] = useState([]);
@@ -12,7 +11,7 @@ function CardsPage() {
   const [isCorrect, setIsCorrect] = useState(null);
   const [correctCount, setCorrectCount] = useState(0);
   const { id } = useParams();
-  const navigate = useNavigate(); // хук для навигации
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function loadCards() {
@@ -31,14 +30,12 @@ function CardsPage() {
     const correctAnswers = cards[currentIndex].answer.trim().toLowerCase();
     const user = userAnswer.trim().toLowerCase();
 
-    // Защита от пустого ввода
     if (!user) {
       setIsCorrect(false);
       setShowAnswer(true);
       return;
     }
 
-    // Проверяем, входит ли пользовательский ответ в строку с правильными ответами
     const isRight = correctAnswers.includes(user);
 
     setIsCorrect(isRight);
@@ -50,18 +47,13 @@ function CardsPage() {
   }
 
   async function handleNext() {
-    const user = UserApi.getFromLocal();
+    const isLast = currentIndex === cards.length - 1;
 
-    if (!user) {
-      console.error("Пользователь не найден в localStorage");
+    if (isLast) {
+      await saveSession({ deckId: Number(id), correctAnswers: correctCount });
+      navigate("/sessions");
       return;
     }
-    
-    await saveSession({
-      userId: user.id,
-      deckId: Number(id),
-      correctAnswers: correctCount
-    });
 
     setShowAnswer(false);
     setUserAnswer("");
@@ -71,29 +63,26 @@ function CardsPage() {
 
   const currentCard = cards[currentIndex];
 
-  // Без этой штуки валится весь код
   if (!currentCard) {
     return;
   }
 
   return (
     <div className='flex-1 flex items-center justify-center'>
-      <div
-        className='
-    max-w-md 
-    w-full 
-    min-h-[300px] 
-    bg-white 
-    rounded-xl 
-    p-6 
-    shadow-lg 
-    text-center 
-    flex 
-    flex-col 
-    justify-center 
-    overflow-hidden
-  '
-      >
+      <div className='
+        max-w-md 
+        w-full 
+        min-h-[300px] 
+        bg-white 
+        rounded-xl 
+        p-6 
+        shadow-lg 
+        text-center 
+        flex 
+        flex-col 
+        justify-center 
+        overflow-hidden
+      '>
         <h2 className='text-lg font-bold mb-4'>
           Вопрос {currentIndex + 1} из {cards.length}
         </h2>
@@ -109,22 +98,22 @@ function CardsPage() {
                 onChange={e => setUserAnswer(e.target.value)}
                 placeholder='Ваш ответ'
                 className='
-              border 
-              border-gray-300 
-              px-4 
-              py-2 
-              rounded-lg 
-              shadow-sm 
-              focus:outline-none 
-              focus:ring-2 
-              focus:ring-blue-400 
-              transition-all 
-              duration-300 
-              max-w-sm 
-              w-full 
-              mx-auto 
-              block
-            '
+                  border 
+                  border-gray-300 
+                  px-4 
+                  py-2 
+                  rounded-lg 
+                  shadow-sm 
+                  focus:outline-none 
+                  focus:ring-2 
+                  focus:ring-blue-400 
+                  transition-all 
+                  duration-300 
+                  max-w-sm 
+                  w-full 
+                  mx-auto 
+                  block
+                '
               />
             </div>
 
@@ -132,19 +121,19 @@ function CardsPage() {
               <button
                 onClick={handleCheckAnswer}
                 className='
-              bg-blue-600 
-              text-white 
-              px-8 
-              py-2 
-              rounded-lg 
-              shadow-md 
-              transition-all 
-              duration-300 
-              hover:bg-blue-700 
-              hover:shadow-xl 
-              hover:scale-105 
-              active:scale-95
-            '
+                  bg-blue-600 
+                  text-white 
+                  px-8 
+                  py-2 
+                  rounded-lg 
+                  shadow-md 
+                  transition-all 
+                  duration-300 
+                  hover:bg-blue-700 
+                  hover:shadow-xl 
+                  hover:scale-105 
+                  active:scale-95
+                '
               >
                 Проверить
               </button>
@@ -164,20 +153,20 @@ function CardsPage() {
               <button
                 onClick={handleNext}
                 className='
-              mt-6 
-              bg-gray-700 
-              text-white 
-              px-5 
-              py-2 
-              rounded-lg 
-              shadow-md 
-              transition-all 
-              duration-300 
-              hover:bg-gray-800 
-              hover:shadow-xl 
-              hover:scale-105 
-              active:scale-95
-            '
+                  mt-6 
+                  bg-gray-700 
+                  text-white 
+                  px-5 
+                  py-2 
+                  rounded-lg 
+                  shadow-md 
+                  transition-all 
+                  duration-300 
+                  hover:bg-gray-800 
+                  hover:shadow-xl 
+                  hover:scale-105 
+                  active:scale-95
+                '
               >
                 Следующий вопрос
               </button>
