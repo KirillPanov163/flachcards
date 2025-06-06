@@ -35,6 +35,7 @@ module.exports = {
       },
       status: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
       correctAnswers: {
         type: Sequelize.INTEGER,
