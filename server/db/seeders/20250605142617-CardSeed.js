@@ -122,6 +122,15 @@ module.exports = {
         updatedAt: new Date(),
       },
 
+      // Жизнь студентов
+      {
+        deckId: 4,
+        question: "Что отправляют в чат  студенты 2-ой фазы, если им всё понятно(да даже если не понятно)?",
+        answer: "огурчики огурцы огурец",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+
 
     ]);
   },
