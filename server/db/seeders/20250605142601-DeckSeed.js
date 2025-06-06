@@ -17,7 +17,13 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        name: "Фильмы",
+        name: "Фильмы и сериалы",
+        authorId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Жизнь студентов",
         authorId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
