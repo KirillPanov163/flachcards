@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CardApi from "../entities/cards/CardApi";
 import { useNavigate, useParams } from "react-router-dom";
 import { saveSession } from "../entities/sessions/saveSession";
+import UserApi from "../entities/users/UserApi";
 
 function CardsPage() {
   const [cards, setCards] = useState([]);
@@ -49,12 +50,18 @@ function CardsPage() {
   }
 
   async function handleNext() {
-    const isLast = currentIndex === cards.length - 1;
+    const user = UserApi.getFromLocal();
 
-    if (isLast) {
-      await saveSession({ deckId: Number(id), correctAnswers: correctCount });
-      navigate("/sessions"); // редирект на главную
+    if (!user) {
+      console.error("Пользователь не найден в localStorage");
+      return;
     }
+    
+    await saveSession({
+      userId: user.id,
+      deckId: Number(id),
+      correctAnswers: correctCount
+    });
 
     setShowAnswer(false);
     setUserAnswer("");
