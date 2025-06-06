@@ -86,6 +86,15 @@ module.exports = {
       },
 
       // Фильмы
+      {
+        deckId: 3,
+        question: "Какой фильм получил больше всего «Оскаров» за всю историю?",
+        answer: "Титаник",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+
+
     ]);
   },
 
