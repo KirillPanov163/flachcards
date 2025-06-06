@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CardApi from "../entities/cards/CardApi";
+import UserApi from "../entities/users/UserApi";
 import { useNavigate, useParams } from "react-router-dom";
 import { saveSession } from "../entities/sessions/saveSession";
 
@@ -50,7 +51,18 @@ function CardsPage() {
     const isLast = currentIndex === cards.length - 1;
 
     if (isLast) {
-      await saveSession({ deckId: Number(id), correctAnswers: correctCount });
+      const user = UserApi.getFromLocal();
+
+      if (!user) {
+        console.log("Пользователь не найден");
+      }
+
+      await saveSession({
+        userId: user.id,
+        deckId: Number(id),
+        correctAnswers: correctCount,
+      });
+
       navigate("/sessions");
       return;
     }
@@ -69,7 +81,8 @@ function CardsPage() {
 
   return (
     <div className='flex-1 flex items-center justify-center'>
-      <div className='
+      <div
+        className='
         max-w-md 
         w-full 
         min-h-[300px] 
@@ -82,7 +95,8 @@ function CardsPage() {
         flex-col 
         justify-center 
         overflow-hidden
-      '>
+      '
+      >
         <h2 className='text-lg font-bold mb-4'>
           Вопрос {currentIndex + 1} из {cards.length}
         </h2>

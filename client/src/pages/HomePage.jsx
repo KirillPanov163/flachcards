@@ -8,7 +8,7 @@ function HomePage() {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const data = await UserApi.getLastUser();
+        const data = await UserApi.getFromLocal();
         setUser(data);
       } catch (error) {
         console.error("Ошибка при получении пользователя:", error);
@@ -44,7 +44,7 @@ function HomePage() {
             active:scale-95
           '
         >
-          Начать
+          Начать игру
         </Link>
       </div>
     </div>

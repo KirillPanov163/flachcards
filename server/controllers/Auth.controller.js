@@ -8,10 +8,26 @@ class AuthController {
       // Создание нового пользователя
       const newUser = await User.create({ name, email, passwordHash });
 
-      return res.status(201).json({ message: "Пользователь создан", userId: newUser.id });
+      return res.status(201).json(newUser);
     } catch (error) {
       console.error("Ошибка при регистрации:", error);
       return res.status(500).json({ message: "Ошибка сервера" });
+    }
+  }
+  static async login(req, res) {
+    try {
+      const { email, passwordHash } = req.body;
+
+      const user = await User.findOne({ where: { email, passwordHash } });
+
+      if (!user) {
+        return res.status(401).json({ message: "Нверный email или пароль" });
+      }
+
+      return res.json(user);
+    } catch (error) {
+      console.log("ошибка входа", error);
+      return res.status(500).json(error);
     }
   }
 }
