@@ -4,7 +4,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("Cards", [
-      // Deck 1: Как выжить на буткемпе
+      // Deck 1: Эльбрус буткемп
       {
         deckId: 1,
         question: "Какое слово говорит каждый второй студент на standup?",
@@ -14,8 +14,8 @@ module.exports = {
       },
       {
         deckId: 1,
-        question: "Что пьёт каждый второй, думая, что это поможет?",
-        answer: "кофе",
+        question: "Кем выпускаются студенты Elbrus Bootcamp?",
+        answer: "актерами актёрами актер актёр",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -36,54 +36,138 @@ module.exports = {
       {
         deckId: 1,
         question: "Что говорит преподаватель перед самым сложным блоком?",
-        answer: "просто легко",
+        answer: "будет...интересно",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 1,
-        question: "Что делать, если ты не знаешь как решить задание?",
-        answer: "HELP",
+        question: "Любимая тема обсуждения Михаила Черничкина?",
+        answer: "БМВ бмв BMW bmw",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
 
-      // Deck 2: Elbrus inside
+      // Deck 2: География
       {
         deckId: 2,
-        question: "Где ты понимаешь, что работать 12 часов в день — это разминка?",
-        answer: "elbrus bootcamp эльбрус буткемп",
+        question: "Самая высокая гора в Европпе?",
+        answer: "Эльбрус Elbrus elbrus эльбрус ",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 2,
-        question: "Какой цвет ассоциируется с успехом?",
-        answer: "зелёный",
+        question: "Страна с самой большой площадью?",
+        answer: "РОССИЯ! россия рашка",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 2,
-        question: "Где внезапно выясняется, что ты теперь женат на JavaScript?",
-        answer: "elbrus bootcamp эльбрус буткемп",
+        question: "Какой вулкан самый активный в Европе?",
+        answer: "Этна",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 2,
-        question: "Как называется метод, которым можно решить любую задачу?",
-        answer: "HELP",
+        question: "Какой город расположен на двух континентах?",
+        answer: "Стамбул стамбул",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 2,
-        question: "Что у всех студентов Elbrus в дефиците, кроме багов?",
-        answer: "сон",
+        question: "Фамилия лучшего картографа в мире?",
+        answer: "Колчин колчин",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+
+      // Фильмы и сериалы
+      {
+        deckId: 3,
+        question: "Какой фильм получил больше всего «Оскаров» за всю историю?",
+        answer: "Титаник",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 3,
+        question: "Какой режиссер снял «Криминальное чтиво»?",
+        answer: "Тарантино",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 3,
+        question: "Какой фильм стал самым кассовым в истории?",
+        answer: "Аватар",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 3,
+        question: "Лучшая линейка фильмов о гонках и тачках?",
+        answer: "Форсаж",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 3,
+        question: "Любимый сериал Даши?",
+        answer: "Друзья",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+
+      // Жизнь студентовв
+      {
+        deckId: 4,
+        question: "Что отправляют в чат студенты 2-ой фазы, если им всё понятно(да даже если не понятно)?",
+        answer: "огурчики огурцы огурец",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 4,
+        question: "Что пугает студентов 1-ой фазы?",
+        answer: "Чекпоинты чекпоинт чек поинты чек поинт",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 4,
+        question: "Что пугает студентов уже 3-ой фазы?",
+        answer: "Ничего",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 4,
+        question: "Любимая тема обсуждения Михаила Черничкина?",
+        answer: "БМВ бмв BMW bmw",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 4,
+        question: "Чего не хватает всем студентам всех фаз(исключение: Вадим Вильгельм)?",
+        answer: "Сна сна Сон сон",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 4,
+        question: "Что надо сделать всем студентам после пятничных показов?",
+        answer: "Накидаться напиться набухаться бухнуть выпить забухать нажраться",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+
+
+
     ]);
   },
 
