@@ -1,12 +1,12 @@
 import UserApi from "../users/UserApi";
 import SessionApi from "./SessionApi";
 
-export async function saveSession({ deckId, correctAnswers }) {
+export async function saveSession({ userId, deckId, correctAnswers }) {
   try {
-    const user = await UserApi.getLastUser();
+    // const user = await UserApi.getLastUser();
 
     const payload = {
-      userId: user.id,
+      userId,
       deckId,
       correctAnswers,
     };

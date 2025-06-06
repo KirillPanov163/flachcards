@@ -9,7 +9,7 @@ function SessionPage() {
   useEffect(() => {
     async function loadSessions() {
       try {
-        const currentUser = await UserApi.getLastUser();
+        const currentUser = await UserApi.getFromLocal();
 
         const allSessions = await SessionApi.getAllSessions();
         const filteredSessions = allSessions.filter(session => session.userId === currentUser.id);

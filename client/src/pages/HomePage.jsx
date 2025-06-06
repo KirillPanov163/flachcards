@@ -8,7 +8,7 @@ function HomePage() {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const data = await UserApi.getLastUser();
+        const data = await UserApi.getFromLocal();
         setUser(data);
       } catch (error) {
         console.error("Ошибка при получении пользователя:", error);
@@ -40,11 +40,12 @@ function HomePage() {
             ease-in-out
             hover:bg-blue-700
             hover:shadow-xl
-            hover:scale-105
+            hover:scale-102
             active:scale-95
+            font-bold
           '
         >
-          Начать
+          Начать игру
         </Link>
       </div>
     </div>
