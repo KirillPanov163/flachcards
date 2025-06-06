@@ -5,13 +5,13 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("Decks", [
       {
-        name: "Как выжить на буткемпе",
+        name: "Эльбрус буткемп",
         authorId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: "Elbrus inside",
+        name: "География",
         authorId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),

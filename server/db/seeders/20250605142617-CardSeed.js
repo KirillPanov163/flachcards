@@ -4,7 +4,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("Cards", [
-      // Deck 1: Как выжить на буткемпе
+      // Deck 1: Эльбрус буткемп
       {
         deckId: 1,
         question: "Какое слово говорит каждый второй студент на standup?",
@@ -14,8 +14,8 @@ module.exports = {
       },
       {
         deckId: 1,
-        question: "Что пьёт каждый второй, думая, что это поможет?",
-        answer: "кофе",
+        question: "Кем выпускаются студенты Elbrus Bootcamp?",
+        answer: "актерами актёрами актер актёр",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -36,54 +36,56 @@ module.exports = {
       {
         deckId: 1,
         question: "Что говорит преподаватель перед самым сложным блоком?",
-        answer: "просто легко",
+        answer: "будет...интересно",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 1,
-        question: "Что делать, если ты не знаешь как решить задание?",
-        answer: "HELP",
+        question: "Любимая тема обсуждения Михаила Черничкина?",
+        answer: "БМВ бмв BMW bmw",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
 
-      // Deck 2: Elbrus inside
+      // Deck 2: География
       {
         deckId: 2,
-        question: "Где ты понимаешь, что работать 12 часов в день — это разминка?",
-        answer: "elbrus bootcamp эльбрус буткемп",
+        question: "Самая высокая гора в Европпе?",
+        answer: "Эльбрус Elbrus elbrus эльбрус ",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 2,
-        question: "Какой цвет ассоциируется с успехом?",
-        answer: "зелёный",
+        question: "Страна с самой большой площадью?",
+        answer: "РОССИЯ! россия рашка",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 2,
-        question: "Где внезапно выясняется, что ты теперь женат на JavaScript?",
-        answer: "elbrus bootcamp эльбрус буткемп",
+        question: "Какой вулкан самый активный в Европе?",
+        answer: "Этна",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 2,
-        question: "Как называется метод, которым можно решить любую задачу?",
-        answer: "HELP",
+        question: "Какой город расположен на двух континентах?",
+        answer: "Стамбул стамбул",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         deckId: 2,
-        question: "Что у всех студентов Elbrus в дефиците, кроме багов?",
-        answer: "сон",
+        question: "Фамилия лучшего картографа в мире?",
+        answer: "Колчин колчин",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+
+      // Фильмы
     ]);
   },
 
