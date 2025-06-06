@@ -158,6 +158,13 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        deckId: 4,
+        question: "Что надо сделать всем студентам после пятничных показов?",
+        answer: "Накидаться напиться набухаться бухнуть выпить забухать нажраться",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
 
 
 
