@@ -93,6 +93,34 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        deckId: 3,
+        question: "Какой режиссер снял «Криминальное чтиво»?",
+        answer: "Тарантино",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 3,
+        question: "Какой фильм стал самым кассовым в истории?",
+        answer: "Аватар",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 3,
+        question: "Лучшая линейка фильмов о гонках и тачках?",
+        answer: "Форсаж",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 3,
+        question: "Любимый сериал Даши?",
+        answer: "Друзья",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
 
 
     ]);

@@ -17,7 +17,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        name: "ММ",
+        name: "Фильмы",
         authorId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
