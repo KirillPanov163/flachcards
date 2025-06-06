@@ -125,7 +125,7 @@ module.exports = {
       // Жизнь студентов
       {
         deckId: 4,
-        question: "Что отправляют в чат  студенты 2-ой фазы, если им всё понятно(да даже если не понятно)?",
+        question: "Что отправляют в чат студенты 2-ой фазы, если им всё понятно(да даже если не понятно)?",
         answer: "огурчики огурцы огурец",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -144,6 +144,21 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        deckId: 4,
+        question: "Любимая тема обсуждения Михаила Черничкина?",
+        answer: "БМВ бмв BMW bmw",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        deckId: 4,
+        question: "Чего не хватает всем студентам всех фаз(исключение: Вадим Вильгельм)?",
+        answer: "Сна сна Сон сон",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+
 
 
     ]);
